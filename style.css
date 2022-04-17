@@ -1,5 +1,85 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
+}
+
+.container {
+  width: 1320px;
+  margin: 0 auto;
+}
+
+/*для панели навигации*/
+.navigation {
+  height: 100%;
+  background-color: #222222;
+}
+
+.navigation__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navigation__img {
+  margin: 18px 18px;
+}
+
+/*Шапка сайта*/
+.header {
+  background-color: #F1E4E6;
+  max-height: 764px;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header__photo {
+  right: 0%;
+}
+
+.header__brtext {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__text {
+  border-left: 12px solid #f16d7f;
+  padding-left: 16px;
+}
+
+.header__text h1 {
+  color: #222222;
+  font-family: Lato;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 58px;
+  letter-spacing: 0em;
+}
+
+.header__text span {
+  color: #222222;
+  font-family: Lato;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  letter-spacing: mormal;
+}
+
+.header__text i {
+  display: inline-block;
+  font-style: normal;
+  color: #f16d7f;
 }
 /*# sourceMappingURL=style.css.map */

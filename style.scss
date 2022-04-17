@@ -1,4 +1,79 @@
+$color_nav_footer: #222222;
+$cont_width: 1320px;
+$header_bgcolor: #F1E4E6;
+
 *{
     margin: 0;
     padding: 0;
+}
+
+.container{
+    width: $cont_width;
+    margin: 0 auto;
+}
+
+/*для панели навигации*/
+.navigation{
+    height: 100%;
+    background-color: $color_nav_footer;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img{
+        margin: 18px 18px;
+    }
+}
+
+/*Шапка сайта*/
+.header{
+    background-color: $header_bgcolor;
+    max-height: 764px;
+
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__photo{
+        right: 0%;
+    }
+
+    &__brtext{
+        align-items: center;
+    }
+
+    &__text{
+        border-left: 12px solid #f16d7f;
+        padding-left: 16px;
+    }
+
+    &__text h1{
+        color: #222222;
+        font-family: Lato;
+        font-size: 48px;
+        font-weight: 900;
+        line-height: 58px;
+        letter-spacing: 0em;
+    }
+
+    &__text span{
+        color: #222222;
+        font-family: Lato;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+        letter-spacing: 0em;
+        text-align: left;
+        letter-spacing: mormal;
+    }
+
+    &__text i{
+        display: inline-block;
+        font-style: normal;
+        color: #f16d7f;
+    }
+
 }
