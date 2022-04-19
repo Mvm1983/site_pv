@@ -8,7 +8,7 @@ $header_bgcolor: #F1E4E6;
 }
 
 .container{
-    width: $cont_width;
+    max-width: $cont_width;
     margin: 0 auto;
 }
 
