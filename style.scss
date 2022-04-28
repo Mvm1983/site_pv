@@ -142,6 +142,30 @@ $color_link: #f16d7f;
 }
 
 /*Основной каталог - категории*/
+
+
+/*Для надписей*/
+.caption__textdeal {
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.caption__text {
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: $color_link;
+}
+
+
 .content{
     
     &__category{
@@ -157,11 +181,159 @@ $color_link: #f16d7f;
 
     &__card{
         max-width: 360px;
-        height: 260px;
+        position: relative;
     }
+
+    &__caption {
+        position: absolute;
+        width: 100%;
+        top: 100px;        
+    }
+
 
     &__cataccimg{
         max-width: 100%;
+        filter: brightness(30%);
+    }
+
+    &__catimg {
+        filter: brightness(30%);
+    }
+
+    &__accesories{
+        position: relative;
+    }
+
+    &__caption__accesories {
+        position: absolute;
+        width: 100%;
+        top: 60px;
+    }
+
+    &__card__link {
+        text-decoration: none;
+    }
+
+
+}
+
+.cardbox {
+
+
+    margin-bottom: 200px;
+
+    &__head {
+        margin: 0 auto;
+        text-align: center;
+
+        & h3{
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 36px;
+            color: #222222;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 60px;
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+    }
+
+    &__item {
+        width: 360px;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    &__item:hover {
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    }
+
+    &__pic {
+        width: 100%;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+    }
+
+    &_text {
+        padding:  20px 20px 20px 0;
+    }
+
+    &__desc {
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+    }
+
+    &__caption {
+        margin-bottom: 18px;
+        font-family: 'Lato';
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #5D5D5D;
+    }
+
+    &__price {
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $color_link;
+    }
+
+    &__item:hover &__pic {
+        filter: brightness(30%);
+    }
+
+    &__add {
+        display: none;
+        position: absolute;
+        top: 188px;
+        justify-content: center;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    &__addlink {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #FFFFFF;
+        text-decoration: none;
+        pointer-events: all;
+    }
+
+    &__addtext {
+        color: #FFFFFF;
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        margin-left: 10px;
+    }
+
+    &__item:hover &__add {
+        display: flex;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
 }

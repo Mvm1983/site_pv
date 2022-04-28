@@ -146,6 +146,27 @@
 }
 
 /*Основной каталог - категории*/
+/*Для надписей*/
+.caption__textdeal {
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.caption__text {
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #f16d7f;
+}
+
 .content__category {
   margin-bottom: 96px;
 }
@@ -164,10 +185,170 @@
 
 .content__card {
   max-width: 360px;
-  height: 260px;
+  position: relative;
+}
+
+.content__caption {
+  position: absolute;
+  width: 100%;
+  top: 100px;
 }
 
 .content__cataccimg {
   max-width: 100%;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.content__catimg {
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.content__accesories {
+  position: relative;
+}
+
+.content__caption__accesories {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+}
+
+.content__card__link {
+  text-decoration: none;
+}
+
+.cardbox {
+  margin-bottom: 200px;
+}
+
+.cardbox__head {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cardbox__head h3 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #222222;
+}
+
+.cardbox__heading {
+  margin-bottom: 60px;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9F9F9F;
+}
+
+.cardbox__item {
+  width: 360px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.cardbox__item:hover {
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+}
+
+.cardbox__pic {
+  width: 100%;
+}
+
+.cardbox__link {
+  display: block;
+  text-decoration: none;
+}
+
+.cardbox_text {
+  padding: 20px 20px 20px 0;
+}
+
+.cardbox__desc {
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.cardbox__caption {
+  margin-bottom: 18px;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5D5D5D;
+}
+
+.cardbox__price {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f16d7f;
+}
+
+.cardbox__item:hover .cardbox__pic {
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.cardbox__add {
+  display: none;
+  position: absolute;
+  top: 188px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  pointer-events: none;
+}
+
+.cardbox__addlink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+  text-decoration: none;
+  pointer-events: all;
+}
+
+.cardbox__addtext {
+  color: #FFFFFF;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 10px;
+}
+
+.cardbox__item:hover .cardbox__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cardbox__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */
