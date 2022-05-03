@@ -68,7 +68,7 @@
 
 .header__text h1 {
   color: #222222;
-  font-family: Lato, sans-serif;
+  font-family: "Lato";
   font-size: 48px;
   font-weight: 900;
   line-height: 58px;
@@ -76,7 +76,7 @@
 
 .header__text span {
   color: #222222;
-  font-family: Lato, sans-serif;
+  font-family: "Lato";
   font-size: 32px;
   font-weight: 700;
   line-height: 38px;
@@ -103,11 +103,12 @@
 }
 
 .menu__p {
-  text-transform: uppercase;
-  font-family: Lato;
+  color: #222222;
+  font-family: "Lato";
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
+  text-transform: uppercase;
   letter-spacing: 0em;
   text-align: left;
   padding-left: 34px;
@@ -117,12 +118,11 @@
 
 .menu__heading {
   text-transform: uppercase;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
   color: #f16d7f;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
   padding: 11px 34px;
 }
 
@@ -131,13 +131,12 @@
 }
 
 .menu__items {
-  text-decoration: none;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 28px;
   color: #646464;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  text-decoration: none;
   padding: 12px 55px;
 }
 
@@ -149,22 +148,22 @@
 /*Для надписей*/
 .caption__textdeal {
   text-transform: uppercase;
-  font-family: 'Lato';
-  font-weight: 400;
+  color: #FFFFFF;
+  font-family: "Lato";
   font-size: 16px;
+  font-weight: 400;
   line-height: 19px;
   text-align: center;
-  color: #FFFFFF;
 }
 
 .caption__text {
   text-transform: uppercase;
-  font-family: 'Lato';
-  font-weight: 700;
+  color: #f16d7f;
+  font-family: "Lato";
   font-size: 24px;
+  font-weight: 700;
   line-height: 28px;
   text-align: center;
-  color: #f16d7f;
 }
 
 .content__category {
@@ -220,7 +219,7 @@
 }
 
 .cardbox {
-  margin-bottom: 200px;
+  margin-bottom: 95px;
 }
 
 .cardbox__head {
@@ -229,21 +228,20 @@
 }
 
 .cardbox__head h3 {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
   color: #222222;
+  font-family: "Lato";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
 }
 
 .cardbox__heading {
-  margin-bottom: 60px;
-  font-family: 'Lato';
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
   color: #9F9F9F;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  margin-bottom: 60px;
 }
 
 .cardbox__item {
@@ -271,30 +269,30 @@
 }
 
 .cardbox__desc {
+  color: #222222;
+  font-family: "Lato";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
   margin-bottom: 12px;
   text-transform: uppercase;
-  font-family: 'Lato';
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  color: #000000;
 }
 
 .cardbox__caption {
-  margin-bottom: 18px;
-  font-family: 'Lato';
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 17px;
   color: #5D5D5D;
+  font-family: "Lato" "light";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  margin-bottom: 18px;
 }
 
 .cardbox__price {
-  font-family: 'Lato';
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
   color: #f16d7f;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
 }
 
 .cardbox__item:hover .cardbox__pic {
@@ -327,10 +325,10 @@
 }
 
 .cardbox__addtext {
-  color: #FFFFFF;
-  font-family: 'Lato';
-  font-weight: 400;
+  color: #ffffff;
+  font-family: "Lato";
   font-size: 14px;
+  font-weight: 400;
   line-height: 17px;
   margin-left: 10px;
 }
@@ -350,5 +348,139 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.cardbox__link_box {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.cardbox__link_button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 38px;
+  border: 2px solid #f16d7f;
+  color: #f16d7f;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.atribute__info {
+  background-color: #222222;
+}
+
+.atribute__info .atribute__infobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.atribute__info .atribute__infobox .atribute__infoitem {
+  width: 360px;
+  text-align: center;
+  margin: 100px 0;
+}
+
+.atribute__info .atribute__infobox .atribute__infoitem_head {
+  color: #FBFBFB;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 28px;
+  margin-bottom: 16px;
+}
+
+.atribute__info .atribute__infobox .atribute__infoitem_text {
+  color: #FBFBFB;
+  font-family: "Lato" "light";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+}
+
+.contact {
+  background-image: url(images/footer_index.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 448px;
+}
+
+.contact__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 130px;
+}
+
+.contact__box_info {
+  width: 360px;
+  text-align: center;
+}
+
+.contact__box_string {
+  color: #222224;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 20px;
+}
+
+.contact__box_email {
+  width: 360px;
+  text-align: center;
+}
+
+.contact__box_head {
+  color: #222224;
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.contact__box_caption {
+  color: #222224;
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 32px;
+}
+
+.contact__box_emailinp {
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
+  font-size: 14px;
+  color: #222224;
+  padding: 12px;
+  border-radius: 49px 0 0 49px;
+}
+
+.contact__box_button {
+  background-color: #f16d7f;
+  border: 1px solid #e1e1e1;
+  padding: 12px;
+  border-radius: 0 49px 49px 0;
+  color: #FFFFFF;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+}
+
+.footer {
+  background-color: #222222;
 }
 /*# sourceMappingURL=style.css.map */
