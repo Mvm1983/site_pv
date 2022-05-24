@@ -83,19 +83,60 @@
 
     <section>
         <div class="container">
-            <nav class="filter">
-                <div class="filter__button">
-                    <a class="filter__button_lnk" href="#">FILTER</a>
-                    <a class="filter__button_lnk" href="#"><img src="images/catalog/Filter.svg" alt="Filter"></a>
-                </div>
-                <div class="filter__menu">
-                    <ul class="filter__menu_lnk">
-                        <li><a class="filter__button_lnk" href="#">TRENDING NOW &emsp;&or;</a></li>
-                        <li><a class="filter__button_lnk" href="#">SIZE &emsp;&or;</a></li>
-                        <li><a class="filter__button_lnk" href="#">PRICE &emsp;&or;</a></li>
+            <div class="filter">
+                <nav class="filter__category">
+                    <details>
+                        <summary>
+                            <p class="filter__category_head">FILTER</p>
+                        </summary>
+                        <details>
+                            <summary><p class="filter__category_text">category</p></summary>
+                            <nav class="filter__linkbox">
+                                <a class="filter__linkbox_link" href="#">Bags</a><br>
+                                <a class="filter__linkbox_link" href="#">Denim</a><br>
+                                <a class="filter__linkbox_link" href="#">Hoodies & Sweatshirts</a><br>
+                                <a class="filter__linkbox_link" href="#">Jackets & Coats</a><br>
+                                <a class="filter__linkbox_link" href="#">Polos</a><br>
+                                <a class="filter__linkbox_link" href="#">Shirts</a><br>
+                                <a class="filter__linkbox_link" href="#">Shoes</a><br>
+                                <a class="filter__linkbox_link" href="#">Sweaters & Knits</a><br>
+                                <a class="filter__linkbox_link" href="#">T-Shirts</a><br>
+                                <a class="filter__linkbox_link" href="#">Tanks</a>
+                            </nav>
+                        </details>
+                        <details>
+                            <summary><p class="filter__category_text">brand</p></summary>
+                            <nav class="filter__linkbox">
+                                <a class="filter__linkbox_link" href="#">Balenciaga</a><br>
+                                <a class="filter__linkbox_link" href="#">Gucci</a><br>
+                                <a class="filter__linkbox_link" href="#">Monder</a><br>
+                                <a class="filter__linkbox_link" href="#">D&G</a><br>
+                                <a class="filter__linkbox_link" href="#">Versace</a><br>
+                                <a class="filter__linkbox_link" href="#">Prada</a>
+                            </nav>
+                        </details>
+                        <details>
+                            <summary><p class="filter__category_text">designer</p></summary>
+                            <nav class="filter__linkbox">
+                                <a class="filter__linkbox_link" href="#">BToen Ford</a><br>
+                                <a class="filter__linkbox_link" href="#">Betsey Johnson</a><br>
+                                <a class="filter__linkbox_link" href="#">Ralph Lauren</a><br>
+                                <a class="filter__linkbox_link" href="#">Mark Jacobs</a><br>
+                                <a class="filter__linkbox_link" href="#">Valentino</a><br>
+                                <a class="filter__linkbox_link" href="#">Dolce & Gabbana</a>
+                            </nav>
+                        </details>
+                    </details>
+                </nav>
+                <nav class="filter__right">
+                    <ul class="filter__right_list">
+                        <li><p class="filter__right_button">TRENDING NOW</p></li>
+                        <li><p class="filter__right_button">SIZE</p></li>
+                        <li><p class="filter__right_button">PRICE</p></li>
                     </ul>
-                </div>
-            </nav>
+                </nav>
+            </div>
+
             <div class="cardbox__container">
                 <div class="cardbox__item">
                     <a class="cardbox__link" href="#">
@@ -278,6 +319,21 @@
                     </div>
                 </div>
             </div>
+
+            <nav class="pagination">
+                <ul>
+                    <li><a class="pagination__page_arrow" href="#">&#60;</a></li>
+                    <li><a class="pagination__page pagination__page_current" href="#">1</a></li>
+                    <li><a class="pagination__page" href="#">2</a></li>
+                    <li><a class="pagination__page" href="#">3</a></li>
+                    <li><a class="pagination__page" href="#">4</a></li>
+                    <li><a class="pagination__page" href="#">5</a></li>
+                    <li><a class="pagination__page pagination__page_space" href="#">6</a></li>
+                    <li><a class="pagination__page" href="#">20</a></li>
+                    <li><a class="pagination__page_arrow" href="#">&#62;</a></li>
+                </ul>
+            </nav>
+
         </div>
     </section>
 

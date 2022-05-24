@@ -481,28 +481,154 @@ $color_link: #f16d7f;
 
 }
 
+/*панель фильтра*/
+
+summary{
+    display: flex;
+    color: black;
+    text-transform: uppercase;
+    
+}
+summary::-webkit-details-marker{
+    display: none;
+}
+details[open] > summary{
+    color: $color_link;
+}
+summary::after{
+    content: url(images/catalog/Filter.svg);
+    padding: 10px 0 0 0;
+}
+details[open] > summary::after{
+    content: url(images/catalog/filter_color.png);
+    padding: 10px 0 0 0;
+}
+
+details details summary::after{
+    content: "";
+}
+details details[open] > summary::after{
+    content: "";
+}
+
+details[open]{
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+}
 
 .filter{
-    display: flex;
-    margin-top: 51px;
-    margin-bottom: 60px;
+    margin-top: 56px;
+    margin-bottom: 64px;
+    position: relative;
 
-    &__button{
-        margin-right: 300px;
+    &__category{
+        width: 360px;
+        position: absolute;
+        z-index: 100;
 
-        &_lnk{
-            display: inline-block;
-            text-decoration: none;
-            @include font(#6F6E6E, 'Lato', 14px, 400, 17px);
+        &_head{
+            padding: 10px 13px 16px 16px;
+            text-transform: uppercase;
+        }
+
+        &_text{
+            text-transform: uppercase;
+            @include font($color_link, 'Lato', 14px, 400, 17px);
+            width: 85%;
+            margin-left: 16px;
+            margin-bottom: 19px;
+            line-height: 37px;
+            border-left: 5px solid $color_link;
+            border-bottom: 1px solid #EBEBEB;
+            font-weight: 37px;
+            padding-left: 11px;
+        }
+        &_head:hover{
+            cursor: pointer;
+        }
+        &_text:hover{
+            cursor: pointer;
         }
     }
 
-    &__menu a{
-        margin-right: 28px;
+    &__right{
+        margin-left: 500px;
+
+        &_list{
+            list-style-type: none;
+            display: flex;
+        }
     }
 
-    &__menu_lnk{
+
+    &__linkbox{
+
+        &_link{
+            background-color: #fff;
+            text-decoration: none;
+            @include font(#6F6E6E, 'Lato', 14px, 400, 17px);
+            display: inline-block;
+            margin-left: 34px;
+            padding: 5px 25px 5px 0px;
+        }
+
+        &_link:hover{
+            cursor: pointer;
+            color: $color_link;
+        }
+    }
+
+}
+
+
+
+/*Пагинация*/
+.pagination{
+    margin-bottom: 96px;
+
+    & ul{
         list-style-type: none;
         display: flex;
+        padding: 11px 16px; 
+        width: 30%;
+        border: 1px solid #EBEBEB;
+        border-radius: 5px;
+        justify-content: center;
+        margin: 0 auto;
     }
+
+
+    &__page{
+        text-decoration: none;
+        @include font(#EBEBEB, 'Lato', 16px, 300, 19px);
+        padding: 11px 8px;
+
+        &_current{
+            color: $color_link;
+        }
+
+        &_arrow{
+            text-decoration: none;
+            @include font(#000000, 'Lato', 19px, 400, 22px);
+            padding: 11px 8px;
+        }
+
+        &_arrow:hover{
+            color: $color_link;
+        }
+        
+        &_space::after{
+            content: ".....";
+            @include font(#EBEBEB, 'Lato', 16px, 300, 19px);
+        }
+        
+        &_space{
+            padding: 11px 0px 11px 8px;
+        }
+    }
+
+    &__page:hover{
+        color: $color_link;
+    }
+
 }
