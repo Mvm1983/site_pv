@@ -59,6 +59,7 @@ $color_link: #f16d7f;
     top: 50px;
     position: absolute;
     background: #FFFFFF;
+    z-index: 100;
 
     &__p {
         @include font($color_nav_footer, 'Lato', 14px, 700, 17px);
@@ -108,17 +109,22 @@ $color_link: #f16d7f;
 
     &__content{
         display: flex;
+        position: relative;
         flex-wrap: wrap;
         align-items: center; 
     }
 
     &__photo{
         width: 50%;
+        position: relative;
+        left: -150px;
     }
 
     &__brtext{
         width: 50%;
+        position: relative;
         align-items: center;
+        left: 100px;
     }
 
     &__text{
@@ -321,8 +327,13 @@ $color_link: #f16d7f;
         border: 2px solid $color_link;
         @include font($color_link, 'Lato', 16px, 400, 19px);
     }
-
 }
+
+.cardbox__link_button:hover{
+    color: #fff;
+    background-color: $color_link;
+}
+
 
 .atribute__info{
     background-color: $color_nav_footer;
@@ -344,12 +355,18 @@ $color_link: #f16d7f;
             }
 
             &_text{
-                @include font(#FBFBFB, 'Lato' 'light', 14px, 300, 17px);
+                @include font(#FBFBFB, 'Lato', 14px, 300, 17px);
+                text-decoration: none;
+            }
+
+            &_text:hover{
+                color: $color_link;
             }
         }
     }   
 
 }
+
 
 .contact{
     background-image: url(images/footer_index.jpg);
@@ -473,10 +490,6 @@ $color_link: #f16d7f;
             @include font($color_link, 'Lato', 14px, 300, 17px);
             text-decoration: none;
         }
-    }
-
-    &__nav:hover &__nav_lnk{
-        color: $color_link;
     }
 
 }
@@ -631,4 +644,229 @@ details[open]{
         color: $color_link;
     }
 
+}
+
+/*страница product*/
+
+.product__photo{
+    width: 100%;
+    background-color: #F7F7F7;
+    position: relative;
+}
+
+.arrows{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 48px;
+    font-weight: 800;
+    top: 50%;
+
+    &__point{
+        padding: 10px 17px 10px 17px;
+        background-color: rgba(42, 42, 42, 0.15);
+        z-index: 2;
+        cursor: pointer;
+
+        &_right{
+            color: $color_link;
+        }
+    }
+}
+
+.photo_img{
+    width: 597px;
+    margin: 0px auto 42px;
+    z-index: 3;
+}
+
+.productdesc{
+    text-align: center;
+    border: 1px solid #EAEAEA;
+    position: relative;
+    background-color: #fff;
+    top: -80px;
+    z-index: 50;
+}
+
+.section{
+    &_name{
+        @include font($color_link, 'Lato', 14px, 300, 17px);
+        margin-top: 64px;
+        margin-bottom: 12px;
+    }
+
+    &_cont{
+        @include font(#4D4D4D, 'Lato', 18px, 300, 21px);
+        margin-bottom: 48px;
+    }
+
+    &_desc{
+        width: 555px;
+        display: inline-block;
+        margin: 0 auto 32px;
+        @include font(#5E5E5E, 'Lato', 14px, 300, 17px);
+    }
+
+    &_price{
+        margin-bottom: 65px;
+    }
+}
+
+.line_name{
+    background-color: $color_link;
+    border: 1px solid $color_link;
+    height: 3px;
+    width: 63px;
+    margin: 0 auto 12px;
+}
+
+.line_price{
+    width: 641px;
+    border: 1px solid #EAEAEA;
+    margin: 0 auto;
+}
+
+.prodparams{
+    width: 350px;
+    align-items: center;
+    margin: 65px auto 48px;
+}
+
+.filter{
+    &_list{
+        list-style-type: none;
+        display: flex;
+    }
+
+    &_link{
+        text-decoration: none;
+        @include font(#6F6E6E, 'Lato', 14px, 400, 17px);
+
+        &_span{
+            padding: 9px;
+        }
+    }
+}
+
+.button__cart{
+
+    width: 200px;
+    margin: 0 auto 65px;
+
+    &_add{
+        display: flex;
+        border: 1px solid $color_link;
+        justify-content: center;
+        width: 100%;
+        @include font($color_link, 'Lato', 16px, 400, 19px);
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    &_addtext{
+        padding-left: 10px;
+    }
+}
+
+.fa-shopping-cart{
+    color: $color_link;
+}
+
+.button__cart_add:hover{
+    background-color: $color_link;
+    .fa-shopping-cart{
+        color: #fff;
+    }
+    .button__cart_addtext{
+        color: #fff;
+    }
+}
+
+/*Корзина*/
+
+.cart__box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 96px;
+    margin-bottom: 128px;
+}
+
+.cart_container{
+    width: 48%;
+}
+
+.cart__link{
+    text-decoration: none; 
+    @include font(#575757, 'Lato', 22px, 400, 26px);
+    margin-bottom: 6px;
+}
+
+.cart_item{
+    display: flex;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    margin-bottom: 40px;
+}
+
+.cart_info{
+    box-sizing: border-box;
+    padding: 22px 0 0 31px;
+
+    h3{
+        @include font(#222222, 'Lato', 24px, 400, 29px);
+        margin-bottom: 42px;
+    }
+
+    p span{
+        @include font($color_link, 'Lato', 22px, 400, 26px);
+    }
+
+    label{
+        padding-right: 24px;
+    }
+    input{
+        @include font(#656565, 'Lato', 18px, 400, 21px);
+        text-align: center;
+        border: 1px solid #656565;
+    };
+
+}
+
+.cart_button{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cart__button_option{
+    text-decoration: none;
+    @include font(#000000, 'Lato', 14px, 300, 16px);
+    border: 1px solid #A4A4A4;
+    padding: 15px 38px;
+}
+
+.cart__button_option:hover{
+    border: 1px solid $color_link;
+    color: $color_link;
+}
+
+.customer_info{
+    width: 48%;
+    padding: 20px 0 0 20px;
+}
+.customer_data{
+    h2{
+        @include font(#222222, 'Lato', 16px, 300, 19px);
+        margin-bottom: 20px;
+    }
+
+    input{
+        @include font(#B1B1B1, 'Lato', 13px, 300, 15px);
+        width: 358px;
+        height: 45px;
+        border: 1px solid #A4A4A4;
+        padding-left: 17px;
+        margin-bottom: 20px;
+    }
 }

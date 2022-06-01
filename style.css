@@ -50,6 +50,7 @@
   top: 50px;
   position: absolute;
   background: #FFFFFF;
+  z-index: 100;
 }
 
 .menu__p {
@@ -114,6 +115,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
@@ -123,13 +125,17 @@
 
 .header__photo {
   width: 50%;
+  position: relative;
+  left: -150px;
 }
 
 .header__brtext {
   width: 50%;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  left: 100px;
 }
 
 .header__text {
@@ -387,6 +393,11 @@
   line-height: 19px;
 }
 
+.cardbox__link_button:hover {
+  color: #fff;
+  background-color: #f16d7f;
+}
+
 .atribute__info {
   background-color: #222222;
 }
@@ -418,10 +429,15 @@
 
 .atribute__info .atribute__infobox .atribute__infoitem_text {
   color: #FBFBFB;
-  font-family: "Lato" "light";
+  font-family: "Lato";
   font-size: 14px;
   font-weight: 300;
   line-height: 17px;
+  text-decoration: none;
+}
+
+.atribute__info .atribute__infobox .atribute__infoitem_text:hover {
+  color: #f16d7f;
 }
 
 .contact {
@@ -583,10 +599,6 @@
   font-weight: 300;
   line-height: 17px;
   text-decoration: none;
-}
-
-.cat__nav:hover .cat__nav_lnk {
-  color: #f16d7f;
 }
 
 /*панель фильтра*/
@@ -764,5 +776,295 @@ details[open] {
 
 .pagination__page:hover {
   color: #f16d7f;
+}
+
+/*страница product*/
+.product__photo {
+  width: 100%;
+  background-color: #F7F7F7;
+  position: relative;
+}
+
+.arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-size: 48px;
+  font-weight: 800;
+  top: 50%;
+}
+
+.arrows__point {
+  padding: 10px 17px 10px 17px;
+  background-color: rgba(42, 42, 42, 0.15);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.arrows__point_right {
+  color: #f16d7f;
+}
+
+.photo_img {
+  width: 597px;
+  margin: 0px auto 42px;
+  z-index: 3;
+}
+
+.productdesc {
+  text-align: center;
+  border: 1px solid #EAEAEA;
+  position: relative;
+  background-color: #fff;
+  top: -80px;
+  z-index: 50;
+}
+
+.section_name {
+  color: #f16d7f;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  margin-top: 64px;
+  margin-bottom: 12px;
+}
+
+.section_cont {
+  color: #4D4D4D;
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+  margin-bottom: 48px;
+}
+
+.section_desc {
+  width: 555px;
+  display: inline-block;
+  margin: 0 auto 32px;
+  color: #5E5E5E;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+}
+
+.section_price {
+  margin-bottom: 65px;
+}
+
+.line_name {
+  background-color: #f16d7f;
+  border: 1px solid #f16d7f;
+  height: 3px;
+  width: 63px;
+  margin: 0 auto 12px;
+}
+
+.line_price {
+  width: 641px;
+  border: 1px solid #EAEAEA;
+  margin: 0 auto;
+}
+
+.prodparams {
+  width: 350px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 65px auto 48px;
+}
+
+.filter_list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filter_link {
+  text-decoration: none;
+  color: #6F6E6E;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.filter_link_span {
+  padding: 9px;
+}
+
+.button__cart {
+  width: 200px;
+  margin: 0 auto 65px;
+}
+
+.button__cart_add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #f16d7f;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  color: #f16d7f;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.button__cart_addtext {
+  padding-left: 10px;
+}
+
+.fa-shopping-cart {
+  color: #f16d7f;
+}
+
+.button__cart_add:hover {
+  background-color: #f16d7f;
+}
+
+.button__cart_add:hover .fa-shopping-cart {
+  color: #fff;
+}
+
+.button__cart_add:hover .button__cart_addtext {
+  color: #fff;
+}
+
+/*Корзина*/
+.cart__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 96px;
+  margin-bottom: 128px;
+}
+
+.cart_container {
+  width: 48%;
+}
+
+.cart__link {
+  text-decoration: none;
+  color: #575757;
+  font-family: "Lato";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 6px;
+}
+
+.cart_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  margin-bottom: 40px;
+}
+
+.cart_info {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 22px 0 0 31px;
+}
+
+.cart_info h3 {
+  color: #222222;
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  margin-bottom: 42px;
+}
+
+.cart_info p span {
+  color: #f16d7f;
+  font-family: "Lato";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.cart_info label {
+  padding-right: 24px;
+}
+
+.cart_info input {
+  color: #656565;
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  border: 1px solid #656565;
+}
+
+.cart_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart__button_option {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  border: 1px solid #A4A4A4;
+  padding: 15px 38px;
+}
+
+.cart__button_option:hover {
+  border: 1px solid #f16d7f;
+  color: #f16d7f;
+}
+
+.customer_info {
+  width: 48%;
+  padding: 20px 0 0 20px;
+}
+
+.customer_data h2 {
+  color: #222222;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  margin-bottom: 20px;
+}
+
+.customer_data input {
+  color: #B1B1B1;
+  font-family: "Lato";
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 15px;
+  width: 358px;
+  height: 45px;
+  border: 1px solid #A4A4A4;
+  padding-left: 17px;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */
