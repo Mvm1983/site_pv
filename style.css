@@ -444,7 +444,6 @@
   background-image: url(images/footer_index.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 448px;
 }
 
 .contact__box {
@@ -454,7 +453,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 130px;
+  padding-top: 86px;
+  padding-bottom: 120px;
 }
 
 .contact__box_info {
@@ -685,7 +685,7 @@ details[open] {
 }
 
 .filter__right {
-  margin-left: 500px;
+  margin-left: 450px;
 }
 
 .filter__right_list {
@@ -693,6 +693,19 @@ details[open] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.filter__right_button {
+  color: #6F6E6E;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+.filter__right_span {
+  padding: 0 10px 0 10px;
 }
 
 .filter__linkbox_link {
@@ -954,10 +967,12 @@ details[open] {
           justify-content: space-between;
   margin-top: 96px;
   margin-bottom: 128px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .cart_container {
-  width: 48%;
+  width: 55%;
 }
 
 .cart__link {
@@ -1013,7 +1028,7 @@ details[open] {
   font-weight: 400;
   line-height: 21px;
   text-align: center;
-  border: 1px solid #656565;
+  border: 1px solid #EAEAEA;
 }
 
 .cart_button {
@@ -1042,8 +1057,12 @@ details[open] {
 }
 
 .customer_info {
-  width: 48%;
+  width: 380px;
   padding: 20px 0 0 20px;
+}
+
+.customer_data {
+  margin-bottom: 58px;
 }
 
 .customer_data h2 {
@@ -1066,5 +1085,146 @@ details[open] {
   border: 1px solid #A4A4A4;
   padding-left: 17px;
   margin-bottom: 20px;
+}
+
+.customer_data a {
+  color: #4A4A4A;
+  font-family: "Lato";
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 13px;
+  padding: 10px 14px;
+  border: 1px solid #A4A4A4;
+  text-decoration: none;
+}
+
+.customer_data a:hover {
+  border: 1px solid #f16d7f;
+  color: #f16d7f;
+}
+
+.cart__price {
+  background-color: #F5F3F3;
+}
+
+.cart__price_line {
+  width: 275px;
+  border: 1px solid #E2E2E2;
+  margin: 0 auto 17px auto;
+}
+
+.cart__price .cart__price_button {
+  display: inline-block;
+  margin: 0 50px 42px;
+  color: #FFFFFF;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  padding: 15px 42px;
+  border: 1px solid #f16d7f;
+  background-color: #f16d7f;
+  text-decoration: none;
+}
+
+.cart__price .cart__price_button:hover {
+  color: #f16d7f;
+  background-color: #F5F3F3;
+}
+
+.price__tag {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.price__tag_sub {
+  color: #4A4A4A;
+  font-family: "Lato";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  padding-top: 40px;
+  margin-bottom: 12px;
+}
+
+.price__tag_sub span {
+  margin: 0 34px 0 45px;
+}
+
+.price__tag_grand {
+  color: #222222;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  margin-bottom: 40px;
+}
+
+.price__tag_grand span {
+  margin: 0 34px 0 45px;
+  color: #f16d7f;
+}
+
+/*Media для cart*/
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .cat__headtext {
+    margin-left: 16px;
+  }
+  .cart_container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .cart_button {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .customer_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 100px;
+  }
+  .customer_data {
+    width: 48%;
+  }
+  .customer_data input {
+    width: 85%;
+  }
+  .cart__price {
+    width: 48%;
+  }
+  .cart__price_button {
+    padding: 15px 25px;
+    margin: 0 auto;
+  }
+  .contact__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact__box_info {
+    margin: 0 auto;
+    margin-bottom: 48px;
+  }
+  .contact__box_email {
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+  .footer__container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -372,13 +372,14 @@ $color_link: #f16d7f;
     background-image: url(images/footer_index.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 448px;
+    //height: 448px;
 }
 
 .contact__box {
     display: flex;
     justify-content: space-between;
-    padding-top: 130px;
+    padding-top: 86px;
+    padding-bottom: 120px;
 
 
     &_info {
@@ -565,11 +566,20 @@ details[open]{
     }
 
     &__right{
-        margin-left: 500px;
+        margin-left: 450px;
 
         &_list{
             list-style-type: none;
             display: flex;
+        }
+        
+        &_button{
+            @include font(#6F6E6E, 'Lato', 14px, 400, 17px);
+            cursor: pointer;
+        }
+
+        &_span{
+            padding: 0 10px 0 10px;
         }
     }
 
@@ -791,10 +801,11 @@ details[open]{
     justify-content: space-between;
     margin-top: 96px;
     margin-bottom: 128px;
+    flex-wrap: wrap;
 }
 
 .cart_container{
-    width: 48%;
+    width: 55%;
 }
 
 .cart__link{
@@ -828,7 +839,7 @@ details[open]{
     input{
         @include font(#656565, 'Lato', 18px, 400, 21px);
         text-align: center;
-        border: 1px solid #656565;
+        border: 1px solid #EAEAEA;
     };
 
 }
@@ -852,10 +863,11 @@ details[open]{
 }
 
 .customer_info{
-    width: 48%;
+    width: 380px;
     padding: 20px 0 0 20px;
 }
 .customer_data{
+    margin-bottom: 58px;
     h2{
         @include font(#222222, 'Lato', 16px, 300, 19px);
         margin-bottom: 20px;
@@ -869,4 +881,135 @@ details[open]{
         padding-left: 17px;
         margin-bottom: 20px;
     }
+
+    a{
+        @include font(#4A4A4A, 'Lato', 11px, 300, 13px);
+        padding: 10px 14px;
+        border: 1px solid #A4A4A4;
+        text-decoration: none;
+    }
+
+    a:hover{
+        border: 1px solid $color_link;
+        color: $color_link;
+    }
+}
+
+.cart__price{
+    background-color: #F5F3F3;
+
+    &_line{
+        width: 275px;
+        border: 1px solid #E2E2E2;
+        margin: 0 auto 17px auto; 
+    }
+
+    .cart__price_button{
+        display: inline-block;
+        margin: 0 50px 42px;
+        @include font(#FFFFFF, 'Lato', 16px, 300, 19px);
+        padding: 15px 42px;
+        border: 1px solid $color_link;
+        background-color: $color_link;
+        text-decoration: none;
+    }
+    
+    .cart__price_button:hover{
+        color: $color_link;
+        background-color: #F5F3F3;
+    }
+
+}
+
+.price__tag{
+    text-align: right;
+    margin-top: 40px;
+}
+
+.price__tag_sub{
+    @include font(#4A4A4A, 'Lato', 11px, 400, 13px);
+    padding-top: 40px;
+    margin-bottom: 12px;
+    span{
+        margin: 0 34px 0 45px;
+    }
+}
+
+.price__tag_grand{
+    @include font(#222222, 'Lato', 16px, 700, 19px);
+    margin-bottom: 40px;
+    span{
+        margin: 0 34px 0 45px;
+        color: $color_link;
+    }
+}
+
+
+/*Media для cart*/
+@media (max-width: 768px) {
+    .container{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .cat__headtext{
+        margin-left: 16px;
+    }
+
+    .cart_container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cart_button{
+        justify-content: space-around;
+    }
+
+    .customer_info{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+
+    .customer_data{
+        width: 48%;
+        input{
+            width: 85%;
+        }
+    }
+
+    .cart__price{
+        width: 48%;
+    }
+
+    .cart__price_button{
+        padding: 15px 25px;
+        margin: 0 auto;
+    }
+
+    .contact{
+
+    }
+
+    .contact__box{
+        flex-direction: column;
+        padding-top: 50px;
+        justify-content: center;
+
+        &_info{
+            margin: 0 auto;
+            margin-bottom: 48px;
+        }
+        &_email{
+            margin: 0 auto;
+            margin-bottom: 80px;
+        }
+    }
+    
+    .footer__container{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
 }
