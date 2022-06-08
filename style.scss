@@ -3,6 +3,15 @@ $cont_width: 1140px;
 $header_bgcolor: #F1E4E6;
 $color_link: #f16d7f;
 
+
+@mixin font($cl, $ff, $fs, $fw, $lh) {
+    color: $cl;
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -23,6 +32,12 @@ $color_link: #f16d7f;
         justify-content: space-between;
     }
 
+    &__list {
+        list-style-type: none;
+        display: flex;
+        margin-top: 5px;
+    }
+
     &__img{
         margin: 18px 18px;
     }
@@ -30,6 +45,60 @@ $color_link: #f16d7f;
     &__right{
         position: relative;
     }
+}
+
+
+.menu_list:hover .menu{
+    display: block;
+}
+
+.menu{
+    
+    display: none;
+    width: 232px;
+    top: 50px;
+    position: absolute;
+    background: #FFFFFF;
+    z-index: 100;
+
+    &__p {
+        @include font($color_nav_footer, 'Lato', 14px, 700, 17px);
+        text-transform: uppercase;
+        text-align: left;
+        padding-left: 34px;
+        padding-top: 34px;
+        padding-bottom: 24px;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        @include font($color_link, "Lato", 14px, 400, 17px);
+        padding: 11px 0 5px 34px;
+    }
+
+    &__items {
+        display: block;
+        @include font(#646464, 'Lato', 14px, 400, 28px);
+        text-decoration: none;
+        padding: 5px 0 5px 55px;
+    }
+
+    &__items:hover {
+        color: $color_link;
+    }
+
+}
+
+.menu::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -5px;
+    left: 30px;
+    transform: rotate(45deg);
 }
 
 /*Шапка сайта*/
@@ -40,17 +109,22 @@ $color_link: #f16d7f;
 
     &__content{
         display: flex;
+        position: relative;
         flex-wrap: wrap;
         align-items: center; 
     }
 
     &__photo{
         width: 50%;
+        position: relative;
+        left: -150px;
     }
 
     &__brtext{
         width: 50%;
+        position: relative;
         align-items: center;
+        left: 100px;
     }
 
     &__text{
@@ -59,19 +133,11 @@ $color_link: #f16d7f;
     }
 
     &__text h1{
-        color: #222222;
-        font-family: Lato, sans-serif;
-        font-size: 48px;
-        font-weight: 900;
-        line-height: 58px;
+        @include font($color_nav_footer, 'Lato', 48px, 900, 58px);
     }
 
     &__text span{
-        color: #222222;
-        font-family: Lato, sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38px;
+        @include font($color_nav_footer, 'Lato', 32px, 700, 38px);
         letter-spacing: 0em;
         text-align: left;
         letter-spacing: mormal;
@@ -85,63 +151,23 @@ $color_link: #f16d7f;
 
 }
 
-.navigation_right:hover .menu{
-    display: block;
-}
-
-.menu{
-    
-    display: none;
-    top: 50px;
-    position: absolute;
-    background: #FFFFFF;
-
-    &__p {
-        text-transform: uppercase;
-        font-family: Lato;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 17px;
-        letter-spacing: 0em;
-        text-align: left;
-        padding-left: 34px;
-        padding-top: 34px;
-        padding-bottom: 24px;
-    }
-
-    &__heading {
-        text-transform: uppercase;
-        font-family: 'Lato';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        color: $color_link;
-        padding: 11px 34px;
-    }
-
-    & ul li {
-        list-style-type: none;
-    }
-
-    &__items {
-        text-decoration: none;
-        font-family: 'Lato';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 28px;
-        color: #646464;
-        padding: 12px 55px;
-    }
-
-    &__items:hover {
-        color: $color_link;
-    }
-
-}
-
 /*Основной каталог - категории*/
+
+
+/*Для надписей*/
+.caption__textdeal {
+    text-transform: uppercase;
+    @include font(#FFFFFF, 'Lato', 16px, 400, 19px);
+    text-align: center;
+}
+
+.caption__text {
+    text-transform: uppercase;
+    @include font($color_link, 'Lato', 24px, 700, 28px);
+    text-align: center;
+}
+
+
 .content{
     
     &__category{
@@ -157,11 +183,833 @@ $color_link: #f16d7f;
 
     &__card{
         max-width: 360px;
-        height: 260px;
+        position: relative;
     }
+
+    &__caption {
+        position: absolute;
+        width: 100%;
+        top: 100px;        
+    }
+
 
     &__cataccimg{
         max-width: 100%;
+        filter: brightness(30%);
+    }
+
+    &__catimg {
+        filter: brightness(30%);
+    }
+
+    &__accesories{
+        position: relative;
+    }
+
+    &__caption__accesories {
+        position: absolute;
+        width: 100%;
+        top: 60px;
+    }
+
+    &__card__link {
+        text-decoration: none;
+    }
+
+
+}
+
+.cardbox {
+
+    margin-bottom: 95px;
+
+    &__head {
+        margin: 0 auto;
+        text-align: center;
+
+        & h3{
+            @include font($color_nav_footer, 'Lato', 30px, 400, 36px);
+        }
+    }
+
+    &__heading {
+        @include font(#9F9F9F, 'Lato', 14px, 400, 17px);
+        margin-bottom: 60px;
+    }
+
+    &__item {
+        width: 360px;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    &__item:hover {
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    }
+
+    &__pic {
+        width: 100%;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+    }
+
+    &_text {
+        padding:  20px 20px 20px 0;
+    }
+
+    &__desc {
+        @include font($color_nav_footer, 'Lato', 13px, 400, 16px);
+        margin-bottom: 12px;
+        text-transform: uppercase;
+    }
+
+    &__caption {
+        @include font(#5D5D5D, 'Lato' 'light', 14px, 300, 17px);
+        margin-bottom: 18px;
+    }
+
+    &__price {
+        @include font($color_link, 'Lato', 16px, 400, 19px);
+    }
+
+    &__item:hover &__pic {
+        filter: brightness(30%);
+    }
+
+    &__add {
+        display: none;
+        position: absolute;
+        top: 188px;
+        justify-content: center;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    &__addlink {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #FFFFFF;
+        text-decoration: none;
+        pointer-events: all;
+    }
+
+    &__addtext {
+        @include font(#ffffff, 'Lato', 14px, 400, 17px);
+        margin-left: 10px;
+    }
+
+    &__item:hover &__add {
+        display: flex;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 48px;
+    }
+
+    &__link_box {
+        margin: 0 auto;
+        width: 100%;
+        //border: 1px solid #000;
+        text-align: center;
+    }
+
+    &__link_button {
+        display: inline-block;
+        text-decoration: none;
+        padding: 14px 38px;
+        border: 2px solid $color_link;
+        @include font($color_link, 'Lato', 16px, 400, 19px);
+    }
+}
+
+.cardbox__link_button:hover{
+    color: #fff;
+    background-color: $color_link;
+}
+
+
+.atribute__info{
+    background-color: $color_nav_footer;
+    
+    .atribute__infobox {
+
+        display: flex;
+        justify-content: space-between;
+
+        .atribute__infoitem {
+            width: $cont_width / 3 - 20px;
+            text-align: center;
+            margin: 100px 0;
+
+            &_head{
+                @include font(#FBFBFB, 'Lato', 20px, 400, 24px);
+                margin-top: 28px;
+                margin-bottom: 16px;
+            }
+
+            &_text{
+                @include font(#FBFBFB, 'Lato', 14px, 300, 17px);
+                text-decoration: none;
+            }
+
+            &_text:hover{
+                color: $color_link;
+            }
+        }
+    }   
+
+}
+
+
+.contact{
+    background-image: url(images/footer_index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    //height: 448px;
+}
+
+.contact__box {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 86px;
+    padding-bottom: 120px;
+
+
+    &_info {
+        width: 360px;
+        text-align: center;
+    }
+
+    &_string {
+        @include font(#222224, 'Lato',20px, 400, 24px);
+        margin-top: 20px;
+    }
+
+    &_email {
+        width: 360px;
+        text-align: center;
+    }
+
+    &_head {
+        @include font(#222224, 'Lato', 24px, 700, 40px);
+    }    
+
+    &_caption {
+        @include font(#222224, 'Lato', 18px, 400, 30px);
+        margin-bottom: 32px;
+    }
+
+    &_emailinp {
+        background-color: #e1e1e1;
+        border: 1px solid #e1e1e1;
+        font-size: 14px;
+        color: #222224;
+        padding: 12px;
+        border-radius: 49px 0 0 49px;
+    }
+
+    &_button {
+        background-color: $color_link;
+        border: 1px solid #e1e1e1;
+        padding: 12px;
+        border-radius: 0 49px 49px 0;
+        @include font(#FFFFFF, 'Lato', 14px, 300, 17px);
+    }
+}
+
+.footer {
+    background-color: $color_nav_footer;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        display: block;
+        @include font(#FBFBFB, 'Lato', 16px, 400, 19px);
+        margin-top: 20px;
+    }
+
+    &__link a {
+        text-align: center;
+        width: 28px;
+        height: 28px;
+        float: left;
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        margin: 0 10px 10px 0;
+        padding: 6px;
+        color: #000;
+    }
+
+    &__link {
+        margin-top: 10px;
+    }
+}
+
+/*Страница каталог*/
+
+.cat{
+    &__header{
+        background-color: #F8F3F4;
+    }
+
+    &__headtext{
+        display: inline-block;
+        @include font($color_link, 'Lato', 24px, 400, 29px);
+        text-transform: uppercase;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0 60px 0;
+    }
+
+    &__nav{
+
+        &_lnk{
+            display: inline-block;
+            @include font(#636363, 'Lato', 14px, 300, 17px);
+            text-decoration: none;
+        }
+
+
+
+        &_lnkcr{
+            display: inline-block;
+            @include font($color_link, 'Lato', 14px, 300, 17px);
+            text-decoration: none;
+        }
+    }
+
+}
+
+/*панель фильтра*/
+
+summary{
+    display: flex;
+    color: black;
+    text-transform: uppercase;
+    
+}
+summary::-webkit-details-marker{
+    display: none;
+}
+details[open] > summary{
+    color: $color_link;
+}
+summary::after{
+    content: url(images/catalog/Filter.svg);
+    padding: 10px 0 0 0;
+}
+details[open] > summary::after{
+    content: url(images/catalog/filter_color.png);
+    padding: 10px 0 0 0;
+}
+
+details details summary::after{
+    content: "";
+}
+details details[open] > summary::after{
+    content: "";
+}
+
+details[open]{
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+}
+
+.filter{
+    margin-top: 56px;
+    margin-bottom: 64px;
+    position: relative;
+
+    &__category{
+        width: 360px;
+        position: absolute;
+        z-index: 100;
+
+        &_head{
+            padding: 10px 13px 16px 16px;
+            text-transform: uppercase;
+        }
+
+        &_text{
+            text-transform: uppercase;
+            @include font($color_link, 'Lato', 14px, 400, 17px);
+            width: 85%;
+            margin-left: 16px;
+            margin-bottom: 19px;
+            line-height: 37px;
+            border-left: 5px solid $color_link;
+            border-bottom: 1px solid #EBEBEB;
+            font-weight: 37px;
+            padding-left: 11px;
+        }
+        &_head:hover{
+            cursor: pointer;
+        }
+        &_text:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__right{
+        margin-left: 450px;
+
+        &_list{
+            list-style-type: none;
+            display: flex;
+        }
+        
+        &_button{
+            @include font(#6F6E6E, 'Lato', 14px, 400, 17px);
+            cursor: pointer;
+        }
+
+        &_span{
+            padding: 0 10px 0 10px;
+        }
+    }
+
+
+    &__linkbox{
+
+        &_link{
+            background-color: #fff;
+            text-decoration: none;
+            @include font(#6F6E6E, 'Lato', 14px, 400, 17px);
+            display: inline-block;
+            margin-left: 34px;
+            padding: 5px 25px 5px 0px;
+        }
+
+        &_link:hover{
+            cursor: pointer;
+            color: $color_link;
+        }
+    }
+
+}
+
+
+
+/*Пагинация*/
+.pagination{
+    margin-bottom: 96px;
+
+    & ul{
+        list-style-type: none;
+        display: flex;
+        padding: 11px 16px; 
+        width: 30%;
+        border: 1px solid #EBEBEB;
+        border-radius: 5px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+
+    &__page{
+        text-decoration: none;
+        @include font(#EBEBEB, 'Lato', 16px, 300, 19px);
+        padding: 11px 8px;
+
+        &_current{
+            color: $color_link;
+        }
+
+        &_arrow{
+            text-decoration: none;
+            @include font(#000000, 'Lato', 19px, 400, 22px);
+            padding: 11px 8px;
+        }
+
+        &_arrow:hover{
+            color: $color_link;
+        }
+        
+        &_space::after{
+            content: ".....";
+            @include font(#EBEBEB, 'Lato', 16px, 300, 19px);
+        }
+        
+        &_space{
+            padding: 11px 0px 11px 8px;
+        }
+    }
+
+    &__page:hover{
+        color: $color_link;
+    }
+
+}
+
+/*страница product*/
+
+.product__photo{
+    width: 100%;
+    background-color: #F7F7F7;
+    position: relative;
+}
+
+.arrows{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 48px;
+    font-weight: 800;
+    top: 50%;
+
+    &__point{
+        padding: 10px 17px 10px 17px;
+        background-color: rgba(42, 42, 42, 0.15);
+        z-index: 2;
+        cursor: pointer;
+
+        &_right{
+            color: $color_link;
+        }
+    }
+}
+
+.photo_img{
+    width: 597px;
+    margin: 0px auto 42px;
+    z-index: 3;
+}
+
+.productdesc{
+    text-align: center;
+    border: 1px solid #EAEAEA;
+    position: relative;
+    background-color: #fff;
+    top: -80px;
+    z-index: 50;
+}
+
+.section{
+    &_name{
+        @include font($color_link, 'Lato', 14px, 300, 17px);
+        margin-top: 64px;
+        margin-bottom: 12px;
+    }
+
+    &_cont{
+        @include font(#4D4D4D, 'Lato', 18px, 300, 21px);
+        margin-bottom: 48px;
+    }
+
+    &_desc{
+        width: 555px;
+        display: inline-block;
+        margin: 0 auto 32px;
+        @include font(#5E5E5E, 'Lato', 14px, 300, 17px);
+    }
+
+    &_price{
+        margin-bottom: 65px;
+    }
+}
+
+.line_name{
+    background-color: $color_link;
+    border: 1px solid $color_link;
+    height: 3px;
+    width: 63px;
+    margin: 0 auto 12px;
+}
+
+.line_price{
+    width: 641px;
+    border: 1px solid #EAEAEA;
+    margin: 0 auto;
+}
+
+.prodparams{
+    width: 350px;
+    align-items: center;
+    margin: 65px auto 48px;
+}
+
+.filter{
+    &_list{
+        list-style-type: none;
+        display: flex;
+    }
+
+    &_link{
+        text-decoration: none;
+        @include font(#6F6E6E, 'Lato', 14px, 400, 17px);
+
+        &_span{
+            padding: 9px;
+        }
+    }
+}
+
+.button__cart{
+
+    width: 200px;
+    margin: 0 auto 65px;
+
+    &_add{
+        display: flex;
+        border: 1px solid $color_link;
+        justify-content: center;
+        width: 100%;
+        @include font($color_link, 'Lato', 16px, 400, 19px);
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    &_addtext{
+        padding-left: 10px;
+    }
+}
+
+.fa-shopping-cart{
+    color: $color_link;
+}
+
+.button__cart_add:hover{
+    background-color: $color_link;
+    .fa-shopping-cart{
+        color: #fff;
+    }
+    .button__cart_addtext{
+        color: #fff;
+    }
+}
+
+/*Корзина*/
+
+.cart__box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 96px;
+    margin-bottom: 128px;
+    flex-wrap: wrap;
+}
+
+.cart_container{
+    width: 55%;
+}
+
+.cart__link{
+    text-decoration: none; 
+    @include font(#575757, 'Lato', 22px, 400, 26px);
+    margin-bottom: 6px;
+}
+
+.cart_item{
+    display: flex;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    margin-bottom: 40px;
+}
+
+.cart_info{
+    box-sizing: border-box;
+    padding: 22px 0 0 31px;
+
+    h3{
+        @include font(#222222, 'Lato', 24px, 400, 29px);
+        margin-bottom: 42px;
+    }
+
+    p span{
+        @include font($color_link, 'Lato', 22px, 400, 26px);
+    }
+
+    label{
+        padding-right: 24px;
+    }
+    input{
+        @include font(#656565, 'Lato', 18px, 400, 21px);
+        text-align: center;
+        border: 1px solid #EAEAEA;
+    };
+
+}
+
+.cart_button{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cart__button_option{
+    text-decoration: none;
+    @include font(#000000, 'Lato', 14px, 300, 16px);
+    border: 1px solid #A4A4A4;
+    padding: 15px 38px;
+}
+
+.cart__button_option:hover{
+    border: 1px solid $color_link;
+    color: $color_link;
+}
+
+.customer_info{
+    width: 380px;
+    padding: 20px 0 0 20px;
+}
+.customer_data{
+    margin-bottom: 58px;
+    h2{
+        @include font(#222222, 'Lato', 16px, 300, 19px);
+        margin-bottom: 20px;
+    }
+
+    input{
+        @include font(#B1B1B1, 'Lato', 13px, 300, 15px);
+        width: 358px;
+        height: 45px;
+        border: 1px solid #A4A4A4;
+        padding-left: 17px;
+        margin-bottom: 20px;
+    }
+
+    a{
+        @include font(#4A4A4A, 'Lato', 11px, 300, 13px);
+        padding: 10px 14px;
+        border: 1px solid #A4A4A4;
+        text-decoration: none;
+    }
+
+    a:hover{
+        border: 1px solid $color_link;
+        color: $color_link;
+    }
+}
+
+.cart__price{
+    background-color: #F5F3F3;
+
+    &_line{
+        width: 275px;
+        border: 1px solid #E2E2E2;
+        margin: 0 auto 17px auto; 
+    }
+
+    .cart__price_button{
+        display: inline-block;
+        margin: 0 50px 42px;
+        @include font(#FFFFFF, 'Lato', 16px, 300, 19px);
+        padding: 15px 42px;
+        border: 1px solid $color_link;
+        background-color: $color_link;
+        text-decoration: none;
+    }
+    
+    .cart__price_button:hover{
+        color: $color_link;
+        background-color: #F5F3F3;
+    }
+
+}
+
+.price__tag{
+    text-align: right;
+    margin-top: 40px;
+}
+
+.price__tag_sub{
+    @include font(#4A4A4A, 'Lato', 11px, 400, 13px);
+    padding-top: 40px;
+    margin-bottom: 12px;
+    span{
+        margin: 0 34px 0 45px;
+    }
+}
+
+.price__tag_grand{
+    @include font(#222222, 'Lato', 16px, 700, 19px);
+    margin-bottom: 40px;
+    span{
+        margin: 0 34px 0 45px;
+        color: $color_link;
+    }
+}
+
+
+/*Media для cart*/
+@media (max-width: 768px) {
+    .container{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .cat__headtext{
+        margin-left: 16px;
+    }
+
+    .cart_container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cart_button{
+        justify-content: space-around;
+    }
+
+    .customer_info{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+
+    .customer_data{
+        width: 48%;
+        input{
+            width: 85%;
+        }
+    }
+
+    .cart__price{
+        width: 48%;
+    }
+
+    .cart__price_button{
+        padding: 15px 25px;
+        margin: 0 auto;
+    }
+
+    .contact{
+
+    }
+
+    .contact__box{
+        flex-direction: column;
+        padding-top: 50px;
+        justify-content: center;
+
+        &_info{
+            margin: 0 auto;
+            margin-bottom: 48px;
+        }
+        &_email{
+            margin: 0 auto;
+            margin-bottom: 80px;
+        }
+    }
+    
+    .footer__container{
+        padding-left: 32px;
+        padding-right: 32px;
     }
 
 }
